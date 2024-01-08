@@ -1,0 +1,271 @@
+.direc{
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    width: 45%;
+    border: 10px solid rgb(0, 0, 0);
+    padding: 0px;
+    margin: 1vw;
+    height: 100vh;
+}
+
+.left-pic {
+    width: 100%; /* 設置裁切後的寬度 */
+    height: 100%; /*設置裁切後的高度 */
+    object-fit: cover; /* 使用 cover 來保持圖片比例，裁切填滿容器 */
+   }
+
+.right{
+    width: 50%;
+    /* border: 5px solid rgb(128, 0, 0); */
+    padding: 0px;
+    margin: 1vw;
+    height: 100vh;
+}
+
+.right-top{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* border: 5px solid rgb(128, 0, 0); */
+    padding: 0px;
+    margin: 1px;
+    height: 50vh;
+    justify-content: space-between;
+}
+
+.tai{
+    z-index: -1;
+    width: 60vh;
+    /* border: 3px solid rgb(0, 0, 0); */
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.hint1{
+    position: absolute;
+    top: 28%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 60vh;
+    /* border: 3px solid rgb(0, 0, 0); */
+    padding: 0px;
+    margin: 0px;
+    height: 50%;
+    font-family: "Kaiti SC", "STKaiti", serif;
+    color: rgb(0, 128, 0);
+    max-width: 50vw;
+    font-size: 2.5vw;
+}
+
+.hint2{
+    position: absolute;
+    top: 53%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 60vh;
+    /* border: 3px solid rgb(0, 0, 0); */
+    padding: 0px;
+    margin: 0px;
+    height: 50%;
+    font-family: "Kaiti SC", "STKaiti", serif;
+    color: rgb(0, 128, 0);
+    max-width: 50vw;
+    font-size: 2.5vw;
+}
+
+.warning {
+    display: none; /* 初始時隱藏 */
+    color: rgb(0, 128, 0); /* 警告文字顏色 */
+    font-weight: bold; /* 粗體 */
+    border: 3px solid rgb(0, 0, 0);
+  }
+
+
+
+.Taiwan{
+    width: 13vw; /* 設置裁切後的寬度 */
+    height: 100%; /*設置裁切後的高度 */
+    object-fit: cover; /* 使用 cover 來保持圖片比例，裁切填滿容器 */
+    /* border: 5px solid rgb(128, 0, 0); */
+    padding: 0px;
+    margin: 0px;
+    z-index: 1000;
+}
+
+.right-right{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    /* border: 5px solid rgb(128, 0, 0); */
+    padding: 0px;
+    margin: 0px;
+    height: 50vh;
+    justify-content: space-between;
+}
+
+.align{
+    width: 5vw; /* 設置裁切後的寬度 */
+    height: 100%; /*設置裁切後的高度 */
+    object-fit: cover; /* 使用 cover 來保持圖片比例，裁切填滿容器 */
+    border: 5px solid rgb(0, 0, 0);
+    padding: 0px;
+    margin: 10px;
+}
+
+.align:hover{
+    filter: brightness(3) invert(0.1) sepia(1) saturate(10) hue-rotate(50deg);
+    background-color: rgb(0, 128, 0);
+}
+
+.dropdown-menu li{
+    font-size: small;
+    background: #ffffff;
+    font-family: "Kaiti SC", "STKaiti", serif;
+}
+
+.keydiv{
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.key{
+    width: 5vw; /* 設置裁切後的寬度 */
+    height: 100%; /*設置裁切後的高度 */
+    object-fit: cover; /* 使用 cover 來保持圖片比例，裁切填滿容器 */
+    border: 5px solid rgb(0, 0, 0);
+    padding: 0px;
+    margin: 10px;
+    margin-top: 15vh;
+    
+}
+.key:hover{
+    filter: brightness(3) invert(0.1) sepia(1) saturate(10) hue-rotate(50deg);
+    background-color: rgb(0, 128, 0);
+}
+@keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+  }
+  
+  .shake-animation {
+    animation: shake 0.5s;
+  }
+
+
+
+
+.option{
+    display: flex;
+    flex-direction: row;
+}
+.option div{
+    width: 100%;
+    border: 5px solid rgb(0, 0, 0);
+    padding: 0px;
+    margin: 20px;
+    height: 20vh;
+    background-color: rgb(200, 255, 200);
+
+
+    font-weight: bold;
+    font-family: "Kaiti SC", "STKaiti", serif; 
+    /* font-size: 3vw;  */
+    color: rgb(0, 128, 0);
+    z-index: 100;/*z軸堆疊順序，數字越小越上層*/
+    max-width: 50vw; /* 調整最大寬度，根據需要 */
+    display: flex;
+    align-items: center; /* 垂直置中 */
+    justify-content: center; /* 水平置中 */
+    font-size: 3vw; /* 使用相對單位 vw (viewport width) 來自動調整文字大小 */
+    white-space: nowrap;/*不換行*/
+    /* text-shadow: 3px 3px 0 #ffffff, -1px -1px 0 rgba(255, 255, 255, 0.75), 1px -1px 0 #000000, -1px 1px 0 #000000;產生邊框效果 */
+    text-orientation: mixed; /* 在某些瀏覽器中需要加上這個屬性，表示文字方向可以混合 */
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+.option div:hover {
+    color: rgb(255, 255, 255);
+    background-color:rgb(0, 128, 0);
+  }
+
+.option div.fail{
+    color: rgb(255, 255, 255);
+    background-color:rgb(128, 128, 128) ;
+}
+
+
+
+
+
+.modal-header {
+    background-color: rgb(200, 255, 200);
+    font-family: "Kaiti SC", "STKaiti", serif; /* 指定字體，優先使用 Arial，若不可用則使用 sans-serif 類型的字體 */
+    text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    0px 0px 0 #000,
+    0px 0px 0 #000;
+    font-size: 3vw;
+}
+.modal-body {
+    background-color: rgb(255, 255, 255);
+    font-family: "Kaiti SC", "STKaiti", serif; 
+    color: rgb(0, 128, 0);
+    font-size: 1.75vw;
+}
+
+.modal-footer div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+    padding: 0px;
+    margin: 1vw;
+    /* border: 3px solid rgb(0, 0, 0); */
+    font-size: 1.5vw;
+}
+
+.choose{
+    width: 5vh; /* 設置裁切後的寬度 */
+    /* height: 100%; 設置裁切後的高度 */
+    object-fit: cover; /* 使用 cover 來保持圖片比例，裁切填滿容器 */
+    border: 5px solid rgb(0, 0, 0);
+    padding: 0px;
+    margin: 0vw;
+    display: flex;
+    justify-content: center;
+}
+
+.choose:hover{
+    filter: brightness(3) invert(0.1) sepia(1) saturate(10) hue-rotate(50deg);
+    background-color: rgb(0, 128, 0);
+}
+
+.choose2{
+    width: 5vw; /* 設置裁切後的寬度 */
+    height: 100%; /*設置裁切後的高度 */
+    object-fit: cover; /* 使用 cover 來保持圖片比例，裁切填滿容器 */
+    border: 5px solid rgb(0, 0, 0);
+    padding: 0px;
+    margin: 10px;
+    margin-top: 1vh;
+}
+  
+.choose2:hover{
+    filter: brightness(3) invert(0.1) sepia(1) saturate(10) hue-rotate(50deg);
+    background-color: rgb(0, 128, 0);
+}

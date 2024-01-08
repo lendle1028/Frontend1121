@@ -1,0 +1,236 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#header-img {
+    width: 70px;
+    height: 70px;
+}
+
+.title_style {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 55px;
+    font-family: "cwTeXFangSong";
+    float: center;
+    margin: 0;
+    padding: 5px 10px;
+    overflow: hidden;
+    background-color: #192F60;
+    height: 90px;
+}
+
+.topic_list {
+    background-color: #3E62ad;
+    height: 30px;
+}
+
+.topic_nav > .topic_ul {
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.topic_li {
+    list-style: none;
+    font-size: 20px;
+    font-family: "cwTeXFangSong";
+}
+
+.topic_li > a {
+    color: white;
+    text-decoration: none;
+}
+
+.topic {
+    font-size: 30px;
+    font-family: "cwTeXFangSong";
+    padding: 5px;
+    padding-bottom: 0;
+    padding-left: 0;
+    color: #192F60;
+}
+
+body > .container-fluid {
+    background-color: #EAF4FC;
+    width: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 2fr 17fr;
+    grid-template-rows: repeat(6,360px);
+    grid-gap: 10px;
+    grid-auto-flow: row;
+}
+.container-fluid > .ranking_list_style {
+    display: flex;
+    height: 614%;
+    padding-top: 5px;
+    overflow: visible;
+    background-color: #BBC8E6;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "cwTeXFangSong";
+    flex-direction: column;
+}
+.ranking_list_style > .ranking_list_title {
+    height: 40px;
+    color: #192F60;
+}
+.ranking_list_style > .rank {
+    text-align: center;
+    font-size: 15;
+    font-family: "cwTeXFangSong";
+    color: #192F60;
+    padding-left: 3px;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.ranking_list_style > .recommend {
+    text-align: left;
+    font-size: 20px;
+    font-family: "cwTeXFangSong";
+    margin-top: 0;
+    padding: 0;
+    padding-left: 7px;
+    padding-right: 4px;
+}
+.ranking_list_style > .btn {
+    color: #ffffff;
+    font-family: "cwTeXFangSong";
+    font-size: 20px;
+    background: #192F60;;
+    margin-top: 10px;
+}
+
+.container-fluid > .topic_collecter {
+    display: flex;
+    grid-column-start: 2;
+    flex-direction: column;
+    background-color: #EAF4FC;
+    overflow: hidden;
+    height: 360px;  
+}
+
+.text_box {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 3px;
+    overflow: scroll;
+    height: 310px;
+}
+
+.text_box::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+}
+.text_box::-webkit-scrollbar-track {
+    border-radius: 0%;
+}
+.text_box::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #192F60;
+}
+
+.text_box > .card {
+    min-width: 200px;
+    max-width: 200px;
+    height: 300px;
+    background-color: #e2f8ffef;
+    overflow: hidden;
+}
+.card > .card-body {
+    background-color: #e2f8ffef;
+    padding: 10px;
+    padding-top: 5px;
+}
+.card-img-top {
+    width: 100%;
+    height: 130px;
+}
+
+.card_nav > .card_ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+.card_li {
+    list-style: none;
+    font-family: "cwTeXFangSong";
+}
+.card_a {
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.toTop-arrow {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 33%;
+	opacity: 0.6;
+	background: #000;
+	cursor: pointer;
+	position:fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: none;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+	width: 18px;
+	height: 5px;
+	border-radius: 3px;
+	background: #EAF4FC;
+	position: absolute;
+	content: "";
+}
+.toTop-arrow::before {
+	transform: rotate(-45deg) translate(0, -50%);
+	left: 0.5rem;
+}
+.toTop-arrow::after {
+	transform: rotate(45deg) translate(0, -50%);
+	right: 0.5rem;
+}
+.toTop-arrow:focus {outline: none;}
+
+.foot{
+    display:flex;
+    background-color:#3E62ad;
+    height:60px;
+    padding: 10px;
+    flex-direction: row;
+    color: #ffffff;
+    font-family:  "cwTeXFangSong";
+    font-size: 20px;
+}
+.ins {
+    max-width: 45px;
+    max-height: 40px;
+    padding-bottom: 3px;
+}
+.foot > a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 2px;
+}
+.yzueeb {
+    max-width: 45px;
+    max-height: 40px;
+    padding-bottom: 3px;
+}

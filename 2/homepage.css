@@ -1,0 +1,114 @@
+.ppp {
+  background-color: lightgrey;
+  width: 50%;
+  border: 3px solid rgb(128, 0, 0);
+  padding: 0px;
+  margin: 1px;
+  transition: transform 1s ease;/*我不知道它有沒有用*/
+}
+
+.direc {
+  display: flex;
+  flex-direction: row;
+}
+
+#button1 {
+  position: absolute;
+  z-index: 1000; /* 設置一個足夠大的 z-index 值，確保它在其他元素之上 */
+  max-width: 10vw; /* 調整最大寬度，根據需要 */
+  bottom: 5vw;
+  left: 19vw;
+  width: 10vw;
+  font-size: 2vw; /* 使用相對單位 vw (viewport width) 來自動調整文字大小 */
+  background-color: rgba(255, 255, 255, 0.75);
+  color: rgb(0, 0, 255);
+  font-weight: bold;
+  font-size: large;
+}
+
+#button2 {
+  position: absolute;
+  z-index: 1000; /* 設置一個足夠大的 z-index 值，確保它在其他元素之上 */
+  max-width: 10vw; /* 調整最大寬度，根據需要 */
+  bottom: 5vw;
+  right: 19vw;
+  width: 10vw;
+  font-size: 2vw; /* 使用相對單位 vw (viewport width) 來自動調整文字大小 */
+  background-color: rgba(255, 255, 255, 0.75);
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  font-size: large;
+}
+
+.choose{
+  position: absolute;
+  z-index: 1000;
+  top: 1vw;
+  left: 1vw;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 4vw;
+  object-fit: cover;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.choose:hover{
+  filter: brightness(1.5) invert(0) sepia(0) saturate(10) hue-rotate(50deg);
+  background-color: rgb(113, 113, 113);
+}
+
+.text1 {
+  font-family: "Kaiti SC", "STKaiti", serif; /* 指定字體，優先使用 Arial，若不可用則使用 sans-serif 類型的字體 */
+  /* font-size: 650%; 設置字體大小為 18 像素 */
+  color: #000000;
+  position: absolute;
+  z-index: 1000;
+  max-width: 50vw; /* 調整最大寬度，根據需要 */
+  width: 20vw;
+  text-align: center;
+  font-size: 13vw; /* 使用相對單位 vw (viewport width) 來自動調整文字大小 */
+  white-space: nowrap;/*不知道有沒有用，姑且先留著*/
+  text-shadow: 3px 3px 0 #ffffff, -5px -5px 0 rgba(255, 255, 255, 0.75), 5px -5px 0 #0000ff, -5px 5px 0 #0000ff; /* 產生邊框效果 */
+  /* transform: skewY(-5deg);傾斜 */
+  writing-mode: vertical-rl; /* vertical-rl 表示垂直書寫，rl 表示由右往左 */
+  text-orientation: mixed; /* 在某些瀏覽器中需要加上這個屬性，表示文字方向可以混合 */
+}
+
+.text2 {
+  font-family: "Kaiti SC", "STKaiti", serif; /* 指定字體，優先使用 Arial，若不可用則使用 sans-serif 類型的字體 */
+  font-size: 175px; /* 設置字體大小為 18 像素 */
+  color: #000000;
+  position: absolute;
+  z-index: 1000;
+  max-width: 50vw; /* 調整最大寬度，根據需要 */
+  width: 21vw;
+  text-align: center;
+  font-size: 13vw; /* 使用相對單位 vw (viewport width) 來自動調整文字大小 */
+  white-space: nowrap;/*不知道有沒有用，姑且先留著*/
+  text-shadow: 3px 3px 0 #ffffff, -5px -5px 0 rgba(255, 255, 255, 0.75), 5px -5px 0 #ff0000, -5px 5px 0 #ff0000; /* 產生邊框效果 */
+  writing-mode: vertical-rl; /* vertical-rl 表示垂直書寫，rl 表示由右往左 */
+  text-orientation: mixed;
+}
+
+.carousel-inner img {
+  width: 50vw; /* 設置裁切後的寬度 */
+  height: 99vh; /* 設置裁切後的高度 */
+  object-fit: cover; /* 使用 cover 來保持圖片比例，裁切填滿容器 */
+  opacity: 0.8;
+}
+
+
+.choose2{
+  position: absolute;
+  z-index: 1000;
+  top: 1vw;
+  right: 1vw;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 4vw;
+  object-fit: cover;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.choose2:hover{
+  filter: brightness(1.5) invert(0) sepia(0) saturate(10) hue-rotate(50deg);
+  background-color: rgb(113, 113, 113);
+}

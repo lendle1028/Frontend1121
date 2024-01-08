@@ -1,0 +1,298 @@
+.ooo {
+    background:radial-gradient(circle, rgb(255, 255, 255), rgb(255, 237, 194), rgb(255, 176, 176), rgb(255, 230, 212));
+}
+.fix{
+    position: relative;
+    width: 1480px;
+    height: 700px;
+    /* background-color: aqua; */
+}
+
+.over{
+    /* background-image: url('picture/台灣地圖.png'); */
+    /* margin: 0; */
+    /* padding: 0; */
+    height: 100vh;
+    /* position: flex; */
+    /* position: absolute; */
+    /* z-index: -999; */
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: contain; */
+}
+.tai{
+    margin: 0;
+    padding: 0;
+    height: 700px;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: contain; */
+    /* position: absolute; */
+    position: relative;
+    /* left: 30vw; */
+    /* z-index: 200; */
+
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.taipei{
+    position: relative;
+    left: -108px;
+    top: -218px;
+    width: 70px;
+    height: 40px;
+    /* background-color: rgba(255, 0, 0, 0.5); */
+    cursor: pointer;
+
+}
+
+.nantou{
+    /* display: block; */
+    position: relative;
+    left: -218px;
+    top: -15px;
+    width: 70px;
+    height: 40px;
+    /* background-color: rgba(0, 157, 255, 0.5); */
+    /* z-index: 1000; */
+    cursor: pointer;
+}
+
+.modal-header {
+    background-color: rgb(200, 200, 200);
+}
+.modal-title{
+    
+    font-family: "Kaiti SC", "STKaiti", serif;
+    font-size: 3vw;
+}
+.modal-body {
+    font-family: "Kaiti SC", "STKaiti", serif; 
+    text-align: center;
+    font-size: 2vw;
+}
+.modal-footer-self{
+    padding: 0px;
+    margin: 1vw;
+    text-align: center
+}
+
+.hualien{
+    display: block;
+    position: relative;
+    left: -140px;
+    top: -50px;
+    width: 70px;
+    height: 40px;
+    /* background-color: rgba(255, 81, 0, 0.5); */
+}
+.chiayi{
+    display: block;
+    position: relative;
+    left: -275px;
+    top: -20px;
+    width: 70px;
+    height: 40px;
+    /* background-color: rgba(81, 0, 255, 0.5); */
+}
+.taichung{
+    display: block;
+    position: relative;
+    left: -265px;
+    top: -208px;
+    width: 70px;
+    height: 40px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.a{
+    border: 20px;
+    padding: 0px;
+    margin: 1vw;
+    width: 15vw;
+    height: 28vh;
+    position: absolute;
+    top: 2%; 
+    left: 6%;
+}
+
+.apic{
+    width: 90%;
+    height: 100%;
+    filter: brightness(1.25) saturate(0.8) contrast(0.8);
+}
+
+.text1 {
+    font-family: "Kaiti SC", "STKaiti", serif; 
+    color: #000000;
+    position: absolute;
+    width: 3vw;
+    top: 0%; 
+    left: 93%;
+    text-align: center;
+    font-size: 2vw;
+    white-space: nowrap;/*不知道有沒有用，姑且先留著*/
+    text-shadow: 1px 1px 0 #ffffff, -2px -2px 0 rgba(255, 255, 255, 0.75), 2px -2px 0 rgb(4, 132, 141), -2px 2px 0  rgb(4, 132, 141);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.b{
+    border: 20px;
+    padding: 0px;
+    margin: 1vw;
+    width: 17vw;
+    height: 25vh;
+    position: absolute;
+    top: 36%; 
+    left: 8%;
+}
+
+.bpic{
+    width: 95%;
+    height: 100%;
+    border: 3px solid rgb(29, 147, 250);
+    filter: brightness(1.25) saturate(0.8) contrast(0.8);
+}
+
+.text2 {
+    font-family: "Kaiti SC", "STKaiti", serif; 
+    color: #000000;
+    position: absolute;
+    width: 3vw;
+    top: 0%; 
+    left: 100%;
+    text-align: center;
+    font-size: 2vw;
+    white-space: nowrap;/*不知道有沒有用，姑且先留著*/
+    text-shadow: 1px 1px 0 #ffffff, -2px -2px 0 rgba(255, 255, 255, 0.75), 2px -2px 0 rgb(29, 147, 250), -2px 2px 0 rgb(29, 147, 250);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+.c{
+    border: 20px;
+    padding: 0px;
+    margin: 1vw;
+    width: 14vw;
+    height: 27vh;
+    position: absolute;
+    top: 66%; 
+    left: 15%;
+}
+
+.text3 {
+    font-family: "Kaiti SC", "STKaiti", serif; 
+    color: #000000;
+    position: absolute;
+    width: 3vw;
+    top: -5%; 
+    left: 120%;
+    text-align: center;
+    font-size: 2vw;
+    white-space: nowrap;/*不知道有沒有用，姑且先留著*/
+    text-shadow: 1px 1px 0 #ffffff, -2px -2px 0 rgba(255, 255, 255, 0.75), 2px -2px 0 rgb(40, 227, 224), -2px 2px 0 rgb(40, 227, 224);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+.d{
+    border: 20px;
+    padding: 0px;
+    margin: 1vw;
+    width: 17vw;
+    height: 22vh;
+    position: absolute;
+    top: 15%; 
+    right: 4%;
+}
+
+.text4 {
+    font-family: "Kaiti SC", "STKaiti", serif; 
+    color: #000000;
+    position: absolute;
+    width: 3vw;
+    top: -10%; 
+    right: 105%;
+    text-align: center;
+    font-size: 2vw;
+    white-space: nowrap;/*不知道有沒有用，姑且先留著*/
+    text-shadow: 1px 1px 0 #ffffff, -2px -2px 0 rgba(255, 255, 255, 0.75), 2px -2px 0 rgb(75, 53, 173), -2px 2px 0 rgb(75, 53, 173); /* 產生邊框效果 */
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+.e{
+    border: 20px;
+    padding: 0px;
+    margin: 1vw;
+    width: 17vw;
+    height: 34vh;
+    position: absolute;
+    top: 53%; 
+    right: 7%;
+}
+
+.epic{
+    width: 85%;
+    height: 100%;
+    filter: brightness(1.25) saturate(0.8) contrast(0.8);
+}
+
+.text5 {
+    font-family: "Kaiti SC", "STKaiti", serif; 
+    color: #000000;
+    position: absolute;
+    width: 3vw;
+    top: 0%; 
+    right: 100%;
+    text-align: center;
+    font-size: 2vw;
+    white-space: nowrap;/*不知道有沒有用，姑且先留著*/
+    text-shadow: 1px 1px 0 #ffffff, -2px -2px 0 rgba(255, 255, 255, 0.75), 2px -2px 0 #53fb20, -2px 2px 0 #53fb20; 
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+.picture {
+    width: 100%;
+    height: 100%;
+    filter: brightness(1.25) saturate(0.8) contrast(0.8);
+}
+
+#button1 {
+    position: absolute;
+    z-index: 1000; /* 設置一個足夠大的 z-index 值，確保它在其他元素之上 */
+    max-width:5vw; /* 調整最大寬度，根據需要 */
+    bottom: 1vw;
+    right: 1vw;
+    height: 10vh;
+    font-size: 2vw; /* 使用相對單位 vw (viewport width) 來自動調整文字大小 */
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 5, 5);
+    font-size: large;
+    font-weight: bold;
+  }
+
+.choose2{
+    position: absolute;
+    z-index: 1000;
+    top: 1vw;
+    right: 1vw;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 4vw;
+    object-fit: cover;
+    border: 3px solid rgb(0, 0, 0);
+}
+  
+.choose2:hover{
+    filter: brightness(1.5) invert(0) sepia(0) saturate(10) hue-rotate(50deg);
+    background-color: rgb(113, 113, 113);
+}

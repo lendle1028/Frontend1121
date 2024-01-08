@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <title>繪圖網站</title>
+    <div class="drawing-section">
+        <div class="section-title">
+            <h2>繪圖設計</h2>
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger" id="bg1">道路 1</button>
+                <button type="button" class="btn btn-danger" id="bg2">道路 2</button>
+                <button type="button" class="btn btn-danger" id="bg3">道路 3</button>
+                <button type="button" class="btn btn-danger" id="bg4">道路 4</button>
+                <label for="imageLoader" class="btn btn-primary" title="圖片尺寸建議4:3">上傳圖片</label>
+                <input type="file" id="imageLoader" name="imageLoader" style="display: none;" />
+
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton">
+                        改造範例
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item"
+                            href="https://www.facebook.com/photo?fbid=952948976355257&set=a.601575628159262"
+                            target="_blank">高雄橋</a>
+                        <a class="dropdown-item"
+                            href="https://www.facebook.com/photo.php?fbid=924506749199480&set=pb.100049204915573.-2207520000&type=3"
+                            target="_blank">高雄中山一路 x 八德一路道路</a>
+                        <a class="dropdown-item"
+                            href="https://www.facebook.com/photo.php?fbid=791927402457416&set=pb.100049204915573.-2207520000&type=3"
+                            target="_blank">高雄前鎮瑞隆路</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <!-- Flex Container for Canvas and Controls -->
+        <div class="drawing-area">
+
+            <!-- Drawing Canvas -->
+            <div class="canvas-container">
+                <div class="drawing-title">
+                    <h2>注意事項</h2></br>
+                    <label>右下有google map，可自行尋找感興趣路段進行道路設計，請將路段截圖並上傳。</label></br>
+                    <label>建議至google map截取圖片(尺寸4:3)</label>
+                    <button type="button" class="btn btn-danger" id="bg5">截圖範例</button>
+                    <button type="button" class="btn btn-danger" id="bg6">修正範例</button>
+                </div>
+                <canvas id="drawingCanvas" width="800" height="600"></canvas>
+                <!-- Google Maps iframe container -->
+                <div class="google-map-container">
+                    <iframe id="googleMapIframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d439.40940624328005!2d121.26050125990986!3d24.967397719723703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1szh-TW!2stw!4v1704209333440!5m2!1szh-TW!2stw" width="300" height="300" style="border: 20px; border-color: rgb(149, 148, 148);" ed  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Drawing Controls -->
+            <div class="controls">
+                <button type="button" class="btn btn-danger" id="save">儲存圖片</button>
+                <button type="button" class="btn btn-danger" id="undo"><i
+                        class="bi bi-arrow-return-left"></i>上一步</button>
+                <label for="brushColor">畫筆顏色:</label>
+                <input type="color" id="brushColor" name="brushColor">
+                <label for="brushSize">大小:<span id="brushSizeDisplay">5</span></label>
+                <input type="range" id="brushSize" name="brushSize" min="1" max="40" value="5">
+                
+                <button type="button" class="btn btn-danger" id="straightLine">
+                <i id="modeIcon" class="bi bi-toggle-off" ></i>直線模式</button>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <script src="assets/js/drawing.js"></script>
+    <script>
+        function updatebrushSizeDisplay(){
+            var brushSize = document.getElementById('brushSize').value;
+            var brushSizeDisplay = document.getElementById('brushSizeDisplay');
+            brushSizeDisplay.textContent = brushSize;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1A2B Game</title>
+    <link rel="stylesheet" href="1A2B.css">
+</head>
+
+<body>
+    <div id="welcomeContainer">
+        <img id="welcomeImg" src="https://pressstart.eu/wp-content/uploads/2019/09/header-talon-2.jpg" alt="Welcome">
+        <button id="startGameBtn" onclick="startGame()">Start Game</button>
+    </div>
+    <font size="5">
+        <h1>1A2B Game</h1>
+    </font>
+    <font color="#e5ad20" size="4">
+        <p>Can you guess the 4-digit number?</p>
+    </font>
+    <input type="text" id="guessInput" maxlength="4" placeholder="Enter your guess">
+    <button id="submitBtn" onclick="checkGuess()">Submit Guess</button>
+    <p id="result"></p>
+    <div id="history"></div>
+    <div id="restartContainer">
+        <button id="restartBtn" onclick="restartGame()">Restart Game</button>
+        <button id="showAnswerBtn" onclick="showAnswer()">Show Answer</button>
+    </div>
+    <div id="answerContainer">
+        <p>The correct 4-digit number is: <span id="answer"></span></p>
+    </div>
+
+    <select id="ratingSelect">
+        <option value="1">遊玩心得</option>
+        <option value="2">1⭐ - 還可以</option>
+        <option value="3">2⭐ - 一般</option>
+        <option value="4">3⭐ - 好</option>
+        <option value="5">4⭐ - 很好</option>
+        <option value="6">5⭐ - 非常好</option>
+    </select>
+
+    <img id="congratulationsImg"
+        src="https://5b0988e595225.cdn.sohucs.com/images/20190722/9822fafcaaf24075af97b24e5a16f05b.gif"
+        alt="Congratulations">
+
+    <script>
+        let answer;
+        let guessHistory = [];
+        document.getElementById("welcomeContainer").style.display = "flex";
+
+        function generateRandomAnswer() {
+            answer = generateRandomNumber();
+            document.getElementById("answer").innerText = answer;
+        }
+
+        function startGame() {
+            document.getElementById("welcomeContainer").style.display = "none";
+            generateRandomAnswer();
+        }
+
+        function checkGuess() {
+            const guessInput = document.getElementById("guessInput");
+            const resultMessage = document.getElementById("result");
+            const historyContainer = document.getElementById("history");
+            const guess = guessInput.value;
+
+            if (!/^\d{4}$/.test(guess)) {
+                alert("Please enter a 4-digit number.");
+                return;
+            }
+            let bulls = 0;
+            let cows = 0;
+
+            for (let i = 0; i < 4; i++) {
+                if (guess[i] === answer[i]) {
+                    bulls++;
+                } else if (answer.includes(guess[i])) {
+                    cows++;
+                }
+            }
+            if (bulls === 4) {
+                resultMessage.innerHTML = `Congratulations! You guessed the correct number: ${answer}`;
+                showCongratulationsImage();
+            } else {
+                resultMessage.innerHTML = `Result: ${bulls}A${cows}B`;
+            }
+            guessHistory.push({ guess, result: `${bulls}A${cows}B` });
+            updateHistoryDisplay(historyContainer);
+            guessInput.value = "";
+        }
+
+        function updateHistoryDisplay(container) {
+            container.innerHTML = "<h3>Guess History:</h3>";
+            guessHistory.forEach((item, index) => {
+                container.innerHTML += `<p>Guess #${index + 1}: ${item.guess} - ${item.result}</p>`;
+            });
+        }
+
+        function restartGame() {
+            guessHistory = [];
+            document.getElementById("answerContainer").style.display = "none";
+            hideCongratulationsImage();
+            document.getElementById("result").innerText = "";
+            document.getElementById("history").innerHTML = "";
+            generateRandomAnswer();
+            const ratingSelect = document.getElementById('ratingSelect');
+            ratingSelect.style.display = 'none';
+        }
+
+        function showAnswer() {
+            document.getElementById("answerContainer").style.display = "block";
+        }
+
+        function showCongratulationsImage() {
+            const congratulationsImg = document.getElementById("congratulationsImg");
+            congratulationsImg.style.display = "block";
+
+            congratulationsImg.style.width = "300px";
+            congratulationsImg.style.height = "200px";
+
+            setTimeout(() => {
+                congratulationsImg.style.transform = "scale(1.5)";
+            }, 100);
+
+            setTimeout(() => {
+                congratulationsImg.style.transform = "scale(1)";
+                hideCongratulationsImage();
+            }, 3000);
+            const ratingSelect = document.getElementById('ratingSelect');
+            ratingSelect.style.display = 'block';
+        }
+
+        function hideCongratulationsImage() {
+            const congratulationsImg = document.getElementById("congratulationsImg");
+            congratulationsImg.style.display = "none";
+            congratulationsImg.style.transform = "scale(1)";
+        }
+
+        function generateRandomNumber() {
+            let number = "";
+            const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            for (let i = 0; i < 4; i++) {
+                const randomIndex = Math.floor(Math.random() * digits.length);
+                number += digits.splice(randomIndex, 1)[0];
+            }
+            return number;
+        }
+    </script>
+</body>
+
+</html>

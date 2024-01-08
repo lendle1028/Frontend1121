@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #0077B6, #0066A2, #004080, #001F3F);
+    overflow: hidden;
+}
+
+.Taiwan {
+    width: 27vw;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 5%;
+    top: 0;
+    z-index: 2;
+}
+
+#button1 {
+    position: absolute;
+    z-index: 1000; /* 設置一個足夠大的 z-index 值，確保它在其他元素之上 */
+    max-width:5vw; /* 調整最大寬度，根據需要 */
+    bottom: 1vw;
+    right: 1vw;
+    height: 10vh;
+    font-size: 2vw; /* 使用相對單位 vw (viewport width) 來自動調整文字大小 */
+    color: rgb(255, 5, 5);
+    font-size: large;
+    font-weight: bold;
+  }
+
+.ppp {
+    width: 60%;
+    height: 70%;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    z-index: 2;
+}
+
+.text {
+    font-family: "Kaiti SC", "STKaiti", serif;
+    color: #FFF44F;
+    font-size: 5vw;
+    position: absolute;
+    top: 4.5%; /* 距離頂部的距離 */
+    left: 43%; /* 距離左側的距離 */
+}
+
+
+.text1{
+    font-family: "Kaiti SC", "STKaiti", serif;
+    color: #FFF44F;
+    /* max-width: 50vw; */
+    font-size: 2vw;
+    position: absolute;
+    top: 27%; /* 距離頂部的距離 */
+    left: 36%; /* 距離左側的距離 */
+}
+
+.choose2{
+    position: absolute;
+    z-index: 1000;
+    top: 1vw;
+    right: 1vw;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 5vw;
+    object-fit: cover;
+    border: 5px solid rgb(0, 0, 0);
+}
+  
+.choose2:hover{
+    filter: brightness(1.5) invert(0) sepia(0) saturate(10) hue-rotate(50deg);
+    background-color: rgb(113, 113, 113);
+}
+
+#button2 {
+    position: absolute;
+    z-index: 1000; /* 設置一個足夠大的 z-index 值，確保它在其他元素之上 */
+    max-width:8vw; /* 調整最大寬度，根據需要 */
+    bottom: 1vw;
+    right: 5vw;
+    height: 10vh;
+    font-size: 2vw; /* 使用相對單位 vw (viewport width) 來自動調整文字大小 */
+    color: rgb(255, 5, 5);
+    font-size: large;
+    font-weight: bold;
+  }

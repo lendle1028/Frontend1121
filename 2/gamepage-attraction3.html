@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gamepage-attraction3</title>
+    <link rel="stylesheet" href="gamepage-attraction3.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+</head>
+<body style="background-color: rgb(220, 220, 255);">
+    <script>
+        function toggleSound() {
+                    var soundIcon = document.getElementById("soundIcon");
+                    var audio = document.getElementById("audio");
+            
+                    if (audio.paused) {
+                        // 播放音樂
+                        audio.play();
+                        // 更換圖示為“音量開啟”圖示
+                        soundIcon.src = "picture/volume-2.svg";
+                    } else {
+                        // 暫停音樂
+                        audio.pause();
+                        // 更換圖示為“音量關閉”圖示
+                        soundIcon.src = "picture/volume-x.svg";
+                    }
+                }
+            
+                window.onload = function () {
+                    toggleSound();
+                };
+        </script>
+        
+    <div class="direc">
+        <div class="left">
+        <!-- 左側 -->
+            <img class="left-pic" src="https://www.taiwanviptravel.com/articles/images/southern-branch-of-the-national-palace-museum/-img1.jpg">
+        </div>
+
+        <div class="right">
+        <!-- 右側 -->
+            <div class="right-top">
+            <!-- 右上 -->
+                <div>
+                <!-- 右上左，提示區 -->
+                    <img src="picture/臺灣.png" class="tai">
+                    <div class="hint1">
+                        <p id="hintmessage1" class="warning">提示一： <br>定位為亞洲藝術文化博物館</p>
+                    </div>
+                    <div class="hint2">
+                        <p id="hintmessage2" class="warning">提示二： <br>建築有龍、象、馬文化象徵的隱喻</p>
+                    </div>
+                    <script>
+                        var isshow1=false;
+                        var isshow2=false;
+                        function showwarning() {
+                            var hint1 = document.getElementById("hintmessage1");
+                            var hint2 = document.getElementById("hintmessage2");
+                            // 如果警告元素是隱藏的，則顯示它
+                            if (isshow1) {
+                                hint2.style.display = "block";
+                                isshow2=true;
+                            } 
+                            if (!isshow1) {
+                                hint1.style.display = "block";
+                                isshow1=true;
+                            }
+                        }
+                    </script>
+                </div>
+                
+                <div class="right-right">
+                <!-- 右上右，吉祥物、欄及提示 -->
+                    <div style="z-index: 1000;">
+                        <!-- <img class="Taiwan" src="picture/臺臺1.png"> -->
+                        <img id="myImage" class="Taiwan" src="picture/臺臺1.png" onmouseover="changeImage()" onmouseout="restoreImage()">
+                        <script>
+                            var count=1;
+                            function changeImage() {
+                                if (count==1){
+                                    document.getElementById("myImage").src ="picture/臺臺2.png";
+                                    count=2;
+                                }
+                                else if (count==2){
+                                    document.getElementById("myImage").src ="picture/臺臺3.png";
+                                    count=3;
+                                }
+                                else if (count==3){
+                                    document.getElementById("myImage").src ="picture/臺臺1.png";
+                                    count=1;
+                                }
+                                
+                            }
+                        </script>
+                    </div>
+                    <div>
+                        <div class="dropdown">
+                            <img class="align" src="picture/align-justify.svg" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                  <li><a class="dropdown-item" href="homepage.html">主頁面</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="selectpage2.html">關卡選擇頁面</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="gamepage-attraction3.html">重新開始</a></li>
+                                </ul>
+                        </div>
+                        <div onclick="toggleSound()" id="soundButton">
+                            <img id="soundIcon" class="choose2" src="picture/volume-2.svg">
+                            <audio id="audio" loop>
+                                <source src="picture/故宮.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                        <div id="keydiv">
+                            <img id="key" class="key" src="picture/key.svg" onclick="showwarning()">
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    var chdiv1 = document.getElementById('ch1');
+                                    var chdiv2 = document.getElementById('ch2');
+                                    var chdiv3 = document.getElementById('ch3');
+                                    var keydiv = document.getElementById('keydiv');
+
+                                    chdiv1.addEventListener('click', function () {
+                                        // 添加包含晃动动画的 CSS 类到 B 号 div
+                                        keydiv.classList.add('shake-animation');
+                                        // 在动画结束后移除 CSS 类，以便下次点击再次触发动画
+                                        setTimeout(function () {
+                                            keydiv.classList.remove('shake-animation');
+                                        }, 500); // 这里的时间应与动画时长相匹配
+                                    });
+
+                                    chdiv2.addEventListener('click', function () {
+                                        keydiv.classList.add('shake-animation');
+                                        setTimeout(function () {
+                                            keydiv.classList.remove('shake-animation');
+                                        }, 500);
+                                    });
+
+                                    chdiv3.addEventListener('click', function () {
+                                        keydiv.classList.add('shake-animation');
+                                        setTimeout(function () {
+                                            keydiv.classList.remove('shake-animation');
+                                        }, 500);
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div>
+            <!-- 右下 -->
+                <div class="option">
+                    <div id="ch1" onclick="fail1(this);playsoundincorrect();incorrect()">臺灣歷史博物館</div>
+                    <div id="ch2" onclick="fail2(this);playsoundincorrect();incorrect()">奇美博物館</div>
+                </div>
+                <div class="option">
+                    <div data-bs-toggle="modal" data-bs-target="#modal2" onclick="playsoundcorrect()">國立故宮南院</div>
+                    <div id="ch3" onclick="fail3(this);playsoundincorrect();incorrect()">國立臺灣博物館</div>
+                </div> 
+
+                <audio id="correct">
+                    <source src="picture/正確.mp3" type="audio/mp3">
+                </audio>
+                <audio id="incorrect">
+                    <source src="picture/錯誤.mp3" type="audio/mp3">
+                </audio>
+                <script>
+                    var time=0;
+                    var a1 = false;
+                    function fail1(element) {
+                        if (!a1) {
+                            element.classList.toggle("fail");
+                            a1 = true;
+                            time++;
+                        }
+                    }
+                    var a2 = false;
+                    function fail2(element) {
+                        if (!a2) {
+                            element.classList.toggle("fail");
+                            a2 = true;
+                            time++;
+                        }
+                    }
+                    var a3 = false;
+                    function fail3(element) {
+                        if (!a3) {
+                            element.classList.toggle("fail");
+                            a3 = true;
+                            time++;
+                        }
+                    }
+
+                    function incorrect(){
+                        if (time==1){
+                            document.getElementById("myImage").src = "picture/臺臺_損1.png";
+                        }
+                        if (time==2){
+                            document.getElementById("myImage").src = "picture/臺臺_損2.png";
+                        }
+                        if (time==3){
+                            document.getElementById("myImage").src = "picture/臺臺_損3.png";
+                        }
+                    }
+                    function playsoundcorrect(){
+                        var audio = document.getElementById("correct");
+                        audio.play();
+                    }
+                    function playsoundincorrect(){
+                        var audio = document.getElementById("incorrect");
+                        audio.play();
+                    }
+                </script>
+            </div>
+
+            <div class="modal fade" id="Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <p class="modal-title" id="staticBackdropLabel">國立故宮南院</p>
+                      </div>
+                      <div class="modal-body">
+                          <p>國立故宮博物院南部院區，簡稱故宮南院，俗稱南故宮或嘉義故宮，為國立故宮博物院轄下兩座主院區之一，坐落在臺灣嘉義縣太保市，鄰近高鐵嘉義站和蒜頭糖廠。場館由「國立故宮博物院南院處」負責管理與營運，以蒐藏、研究、教育、展示亞洲藝術品與相關文物為定位，院區戶外另設有人工湖和遊憩設施。國立故宮博物院於2001年籌設建立南部院區，2003年1月3日核定在嘉義縣太保市設立南部院區，此計畫隨後成為新十大建設中的一個項目並正式動工，2015年12月28日啟用試營運。2017年提出新故宮計畫，計畫將增設國寶文物修復展示館。</p>
+                      </div>
+                    <div class="modal-footer">
+                        <div><a href="selectpage.html"><img class="choose" src="picture/arrow-left.svg"></a>關卡選擇</div>
+                        <div><a href="#" onclick="jumpTomodal2()"><img class="choose" src="picture/arrow-left.svg"></a>影片解說</div>
+                        <div><a href="homepage.html"><img class="choose" src="picture/home.svg"></a>主頁面</div>
+                        <div><a href="gamepage-attraction3.html"><img class="choose" src="picture/arrow-right.svg"></a>下一關</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="modal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <p class="modal-title" id="staticBackdropLabel">恭喜答對</p>
+                      </div>
+                      <div class="modal-body">
+                          <p>國立故宮博物院介紹(12分08秒)<br><iframe width="560" height="315" src="https://www.youtube.com/embed/qGGY0Vftxvs" frameborder="0" allowfullscreen></iframe></p>
+                      </div>
+                      <div class="modal-footer">
+                          <div><a href="selectpage.html"><img class="choose" src="picture/arrow-left.svg"></a>關卡選擇</div>
+                          <div><a href="homepage.html"><img class="choose" src="picture/home.svg"></a>主頁面</div>
+                          <div><a href="#" onclick="jumpToModal()"><img class="choose" src="picture/arrow-right.svg"></a>文字解說</div>
+                          <div><a href="gamepage-attraction4.html"><img class="choose" src="picture/arrow-right.svg"></a>下一關</div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <script>
+                function jumpToModal() {
+                    // 關閉第一個模態框
+                    $('#modal2').modal('hide');
+                    
+                    // 打開第二個模態框
+                    $('#Modal').modal('show');
+                }
+            </script>
+            <script>
+                function jumpTomodal2() {
+                    // 關閉第一個模態框
+                    $('#Modal').modal('hide');
+                    
+                    // 打開第二個模態框
+                    $('#modal2').modal('show');
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

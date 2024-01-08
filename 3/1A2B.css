@@ -1,0 +1,145 @@
+body {
+    line-height: 1.5;
+}
+
+p {
+    line-height: 2;
+}
+
+body {
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 50px;
+    background-image: url('https://img.freepik.com/free-vector/abstract-navy-blue-colour-rhombus-pattern-background-banner-multipurpose-design_1340-17102.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    position: relative;
+}
+
+
+body {
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 50px;
+    background-color: #f0f0f0;
+    color: #333;
+    position: relative;
+}
+
+h1 {
+    color: #e44d26;
+}
+
+#guessInput {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#submitBtn {
+    background-color: #e44d26;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+#restartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#restartBtn,
+#showAnswerBtn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    margin-left: 10px;
+}
+
+#result {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #e44d26;
+}
+
+#history {
+    margin-top: 20px;
+    text-align: left;
+    color: #e5ad20;
+}
+
+#answerContainer {
+    margin-top: 20px;
+    display: none;
+    color: #e5ad20;
+}
+
+#congratulationsImg {
+    max-width: 100%;
+    max-height: 100%;
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+#welcomeContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcomeImg {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#startGameBtn {
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e44d26;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    z-index: 999;
+}
+
+#guessInput {
+    font-size: 16px;
+    padding: 7px;
+    width: 120px;
+}
+
+select {
+    display: none;
+    padding: 5px;
+    font-size: 16px;
+    margin: auto;
+    background-color: #281125;
+    color: #d8f2da;
+}

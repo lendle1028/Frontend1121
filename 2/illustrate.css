@@ -1,0 +1,54 @@
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffffff, #a3a3a3,#ffffff);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100%; */
+}
+
+.mid{
+    width: 65%;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 1vw;
+    margin: 1vw;
+    height: 100%;
+    text-align: center;
+    font-family: "Kaiti SC", "STKaiti", serif;
+    
+}
+.text{
+    font-family: "Kaiti SC", "STKaiti", serif;
+    color: rgb(32, 123, 62);
+    /* max-width: 50vw; */
+    font-size: 2vw;
+    border-bottom: 3px dotted rgb(0, 0, 0);
+    border-color: rgb(0, 16, 133);
+    padding: 0vw;
+    margin: 1vw;
+}
+
+.pic {
+    width: 50vw; /* 設置裁切後的寬度 */
+    height: 100%; /*設置裁切後的高度 */
+    object-fit: cover; /* 使用 cover 來保持圖片比例，裁切填滿容器 */
+   }
+
+   .choose2{
+    position: absolute;
+    z-index: 1000;
+    top: 1vw;
+    right: 0.6vw;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 4vw;
+    object-fit: cover;
+    border: 3px solid rgb(0, 0, 0);
+  }
+  
+  .choose2:hover{
+    filter: brightness(1.5) invert(0) sepia(0) saturate(10) hue-rotate(50deg);
+    background-color: rgb(113, 113, 113);
+  }

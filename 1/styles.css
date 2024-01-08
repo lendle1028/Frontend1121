@@ -1,0 +1,149 @@
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-image: url('assets/遊戲畫面.jpg'); /* 替換成你的圖片檔案名稱 */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+}
+
+#input-output-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#outputImage {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+#options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#options button {
+    flex: 1;
+    font-size: 16px;
+    margin: 5px;
+    padding: 10px;
+    max-width: 150px;
+    white-space: nowrap;
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+}
+
+#options button:hover {
+    background-color: #0056b3;
+    border: 1px solid #0056b3;
+}
+
+#progress-bar-container {
+    margin-top: 20px;
+}
+
+#progress-bar {
+    height: 20px;
+    background-color: #03ff0b;
+    width: 0%;
+}
+
+.progessbar {
+    position: relative;
+    text-align: center;
+    height: 16px;
+}
+
+.progessbar .text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: 16px;
+    z-index: 10;
+}
+
+.progessbar .bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 16px;
+    background-color: #03da0a;
+}
+
+.score {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.score-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#score {
+    color: #03da0a;
+}
+
+#answer-display {
+    color: #03da0a;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+ 
+
+#answer-display.error {
+    color: rgb(255, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    
+}
+
+#answer-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#play-again {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#play-again:hover {
+    background-color: #03da0a;
+}
+
+#end-score {
+    
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>節慶關卡選擇</title>
+    <link rel="stylesheet" href="selectpage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body class="ooo" >
+    <script>
+        function toggleSound() {
+            var soundIcon = document.getElementById("soundIcon");
+            var audio = document.getElementById("audio");
+    
+            if (audio.paused) {
+                // 播放音樂
+                audio.play();
+                // 更換圖示為“音量開啟”圖示
+                soundIcon.src = "picture/volume-2.svg";
+            } else {
+                // 暫停音樂
+                audio.pause();
+                // 更換圖示為“音量關閉”圖示
+                soundIcon.src = "picture/volume-x.svg";
+            }
+        }
+    
+        window.onload = function () {
+            toggleSound();
+        };
+    </script>
+    <div onclick="toggleSound()" id="soundButton">
+        <img id="soundIcon" class="choose2" src="picture/volume-2.svg">
+        <audio id="audio" loop>
+            <source src="picture/節日選擇.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <div class="ppp">
+        <div>
+            <div><img class="gray" src="https://img.cyol.com/img/m/attachement/jpg/site2/20180217/IMGccb0daff0f0946888078816.jpg"></div>
+            <div><img class="gray" src="https://i.epochtimes.com/assets/uploads/2023/04/id13972975-lanterns-600x359.jpg"></div>
+            <div><img class="gray" src="https://imgcdn.cna.com.tw/www/postwrite/2023/20230307/00336211.20230307618576140M.jpg"></div>
+            <a href="gamepage-festival1.html">
+            <div><img class="colorful" src="https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2021/03/30/20210330-050501_U20554_M681455_dc29.jpg?itok=jTmhaP5B"></div></a>
+        </div>
+        <div>
+            <div><img class="gray" src="https://www.sakura.com.tw/Uploads/Post/contents/%E7%AB%AF%E5%8D%88%E7%AF%80%E7%94%B1%E4%BE%86%E8%88%87%E7%BF%92%E4%BF%97%E4%BB%8B%E7%B4%B9%EF%BC%9A-1.png"></div>
+            <a href="gamepage-festival2.html">
+            <div><img class="colorful" src="https://sw.cool3c.com/user/100672/2023/6023bdf0-762a-437c-bb7b-bcd27e0bfb9c.jpg?auto=compress&fix=max&w=2560"></div></a>
+            <div><img class="gray" src="https://attach.setn.com/newsimages/2021/08/04/3255526-PH.jpg"></div>
+            <a href="gamepage-festival3.html">
+            <div><img class="colorful" src="https://icrvb3jy.xinmedia.com/solomo/article/185030/0327C5E7-C1BA-7799-61FC-24325BE597EF.jpeg"></div></a>
+        </div>
+        <div>
+            <a href="gamepage-festival4.html">
+            <div><img class="colorful" src="https://images.twgreatdaily.com/images/image/_Kj/_Kj5KG0BJleJMoPMST_O.jpg"></div></a>
+            <a href="gamepage-festival5.html">
+            <div><img class="colorful" src="https://api.housefeel.com.tw/wp-content/uploads/2023/10/230928-%E5%9C%8B%E6%85%B6%E7%85%99%E7%81%AB%E7%B6%B2%E7%AB%99%E7%B8%AE%E5%9C%96-930x500-1.png"></div></a>
+            <div><img class="gray" src="https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2018/10/08/20181008-053529_U5965_M460802_f2fd.jpg?itok=M_wsIPVs"></div>
+            <div><img class="gray" src="https://cc.tvbs.com.tw/img/program/_data/i/upload/2022/12/20/20221220171458-7d72bc27-la.jpg"></div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-outline-warning " id="button1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        <br>
+    </button>
+    <script>
+        document.getElementById("button1").addEventListener("click", function() {
+          window.location.href = "homepage.html";
+        });
+    </script>
+
+</body>
+
+</html>

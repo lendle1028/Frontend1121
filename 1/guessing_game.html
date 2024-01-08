@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>猜猜樂</title>
+</head>
+
+<body>
+    <div id="game-container">
+        <div class="score">
+            <div class="score-text">得分：<span id="score">0</span></div>
+        </div>
+        <div class="progessbar">
+            <div class="text"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="msg"></div>
+
+        <div id="input-output-container">
+            <div id="answer-message"></div>
+            <img id="outputImage" alt="Guess the Image">
+            <div id="answer-display"></div>
+            <div id="answer-info">
+                <span id="pokemon-name"></span>
+            </div>
+            <div id="answer-messages">
+                <div id="correct-message" class="answer-message"></div>
+                <div id="incorrect-message" class="answer-message"></div>
+            </div>
+            <div id="options">
+                <button id="button1" onclick="checkAnswer(0)">選項1</button>
+                <button id="button2" onclick="checkAnswer(1)">選項2</button>
+                <button id="button3" onclick="checkAnswer(2)">選項3</button>
+            </div>
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+    <div id="end-game-message" style="display:none">
+        <div id="end-score"></div>
+        <button id="play-again" onclick="innitGame()">play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

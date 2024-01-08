@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>懶人包的懶人包</title>
+    <link rel="icon" href="Photos\final_project (2).ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="script.js" defer></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css" >
+    <link rel="icon" href="https://fontawesome.com/icons/seedling?f=classic&s=solid">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body style="background-color: #EEF4E7">
+  <header class="title_style"><img
+    id="header-img" src="Photos\final.png" alt="original trombones logo"/>懶人包的懶人包</header>
+  <div class="topic_list">
+    <nav class="topic_nav">
+      <ul class="topic_ul">
+        <li class="topic_li"><a href="#topic_current_event"><span class="fas fa-newspaper"></span> 時事</a></li>
+        <li class="topic_li"><a href="#topic_science"><span class="fas fa-globe"></span> 自然科學與科技</a></li>
+        <li class="topic_li"><a href="#topic_health"><span class="fas fa-seedling"></span> 健康</a></li>
+        <li class="topic_li"><a href="#topic_entertainment"><span class="fas fa-bomb"></span> 娛樂</a></li>
+        <li class="topic_li"><a href="#topic_travel"><span class="fas fa-camera"></span> 旅遊</a></li>
+        <li class="topic_li"><a href="#topic_sport"><span class="fas fa-dumbbell"></span> 體育</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container-fluid">
+    <aside class="ranking_list_style">
+    <header class = "ranking_list_title"><span class="fas fa-medal"></span>點閱排行榜</header>
+    <div class = "rank"><span class="fas fa-fire"></span>第一名</div><div class = "recommend" id = "top"></div>
+    <div class = "rank"><span class="fas fa-fire"></span>第二名</div><div class = "recommend" id = "second"></div>
+    <div class = "rank"><span class="fas fa-fire"></span>第三名</div><div class = "recommend" id = "third"></div>
+    <button class = "btn" onclick = "rendom_recommend()">隨機推薦</button>
+    </aside>
+
+    <section id="topic_current_event" class="topic_collecter">
+      <header class="topic"><span class="fas fa-newspaper"></span> 時事</header>
+      <div class="text_box">
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\current_event\current_event1.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://news.tvbs.com.tw/politics/2342877" class="card_a" id = "1001"
+                    onclick="count_click('1001')" target="_blank">2024大選總統政見發表》（不斷更新）第三場賴清德、侯友宜、柯文哲　三方交鋒重點一次看</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\current_event\current_event2.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.youtube.com/watch?v=-uu9KVBwpAc" class="card_a" id = "1002"
+                    onclick="count_click('1002')" target="_blank">擦皮鞋、做美甲，還跳舞娛樂客人！海底撈的「肉麻服務」到底有多狂？</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\current_event\current_event3.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.youtube.com/watch?v=zuoqLNK8_mc" class="card_a" id = "1003"
+                    onclick="count_click('1003')" target="_blank">恩怨一千年 ▶ 烏克蘭與俄羅斯有什麼深仇大恨? 克里米亞危機、頓巴斯戰爭的前因後果</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\current_event\current_event4.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://views.learneating.com/food-tech/2023-egg-issue/" class="card_a" id = "1004"
+                    onclick="count_click('1004')" target="_blank">【2023】好食課時事解析⟫進口蛋、液蛋爭議懶人包！</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\current_event\current_event5.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://engoo.com.tw/blog/theme/israel-palestine_war_conflict_history/" class="card_a" id = "1005"
+                    onclick="count_click('1005')" target="_blank">【時事英文】五分鐘讀懂以巴戰爭懶人包：為什麼發生衝突？加薩走廊在哪裡？哈瑪斯又是誰？</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\current_event\current_event6.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://tech.udn.com/tech/amp/story/123151/7682708" class="card_a" id = "1006"
+                    onclick="count_click('1006')" target="_blank">懶人包／三星Galaxy S24發表會確定！除了AI…新機傳聞價格、規格、顏色亮點一次看</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\current_event\current_event7.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.edh.tw/lohas/article/31711" class="card_a" id = "1007"
+                    onclick="count_click('1007')" target="_blank">2024總統大選、立委選舉懶人包／投票要帶什麼？投票時間、地點、步驟規定一次看</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\current_event\current_event8.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://news.u-car.com.tw/news/article/77157" class="card_a" id = "1008"
+                    onclick="count_click('1008')" target="_blank">2024年元旦上路，地方交通新制懶人包</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\current_event\current_event9.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://reurl.cc/v0e80L" class="card_a" id = "1009"
+                    onclick="count_click('1009')" target="_blank">地震時正在洗澡跟上廁所怎麼辦？下一步該如何逃生？地震懶人包一篇就懂</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\current_event\current_event10.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://applealmond.com/posts/216410" class="card_a" id = "1010"
+                    onclick="count_click('1010')" target="_blank">【2024 超商福袋懶人包】全家、7-11、萊爾富、OK Mart四大超商福袋，開賣時間價格、內容一次看</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\current_event\current_event11.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.cna.com.tw/topic/newstopic/3829.aspx" class="card_a" id = "1011"
+                    onclick="count_click('1011')" target="_blank">COVID-19疫情整理包</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\current_event\current_event12.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://reurl.cc/bD2ERl" class="card_a" id = "1012"
+                    onclick="count_click('1012')" target="_blank">時事懶人包：國產商用機首來港</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\current_event\current_event13.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.clarisonic.com.tw/archives/132737" class="card_a" id = "1013"
+                    onclick="count_click('1013')" target="_blank">Gucci貝殼包詳盡懶人包</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="topic_science" class="topic_collecter">
+      <header class="topic"><span class="fas fa-globe"></span> 自然科學與科技</header> 
+      <div class="text_box"> 
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\science\science1.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.youtube.com/watch?v=FqxUugpCWe4" class="card_a" id = "2001"
+                    onclick="count_click('2001')"target="_blank">韓國LK-99超導體懶人包</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\science\science2.png" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://irsatwork.blogspot.com/" class="card_a" id = "2002"
+                    onclick="count_click('2002')"target="_blank">科宅導讀－知識娛樂 × 問題 × 夢囈與詩</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\science\science3.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://research.sinica.edu.tw/?fbclid=IwAR2rSshNo9vSB36j4CQYuspxfsQ6AIhwFKOI8LuMVBUTivTKgTljvjuZ-Nk" class="card_a" id = "2003"
+                    onclick="count_click('2003')"target="_blank">中央研究院—研之有物</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\science\science4.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.facebook.com/B612Neuron?mibextid=ZbWKwL" class="card_a" id = "2004"
+                    onclick="count_click('2004')"target="_blank">B612號神經元</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\science\science5.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://highscope.ch.ntu.edu.tw/?fbclid=IwAR2MlUKQbwMrXupUcUQnfN6vMHNb97uSu9u5DoTkWeG3Rjx1_hHZtTX63w8" class="card_a" id = "2005"
+                    onclick="count_click('2005')"target="_blank">科學online</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\science\science6.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://reurl.cc/67Ek8Z" class="card_a" id = "2006"
+                    onclick="count_click('2006')"target="_blank">做基礎研究「有什麼用」？中研院研究員呂俊毅：「必要基因」可在演化中快速改變，打破過往學界認知</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\science\science7.png" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.twreporter.org/a/marine-litter" class="card_a" id = "2007"
+                    onclick="count_click('2007')"target="_blank">【懶人包】你所不知的「海底廢」現世報告</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\science\science8.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://reurl.cc/j31GgZ" class="card_a" id = "2008"
+                    onclick="count_click('2008')"target="_blank">教小孩科學知識的方法懶人包：利用前運思期的特性，觀察、討論、擬人化、故事化、具體化，也能跟孩子說明科學現象或概念！</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="topic_health" class="topic_collecter">
+      <header class="topic"><span class="fas fa-seedling"></span> 健康</header>
+      <div class="text_box"> 
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\health\health1.png" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.careonline.com.tw/2017/03/GERD.html" class="card_a" id = "3001" 
+                    onclick="count_click('3001')" target="_blank">吃甜食又讓妳胃食道逆流了嗎？（懶人包）</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\health\health2.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.healthforall.com.tw/?action=article_in&id=5410" class="card_a" id = "3002" 
+                    onclick="count_click('3002')" target="_blank">益生菌終結便秘！專家傳授挑選好菌6大準則及DIY優格食譜</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\health\health3.png" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.careonline.com.tw/2017/03/DM.html" class="card_a" id = "3003" 
+                    onclick="count_click('3003')" target="_blank">你有糖尿病嗎？（懶人包）</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\health\health4.png" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.careonline.com.tw/2018/02/varicose-vein.html" class="card_a" id = "3004" 
+                    onclick="count_click('3004')" target="_blank">又痛又癢又不好看的浮腳筋 – 靜脈曲張（懶人包）</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\health\health5.png" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.careonline.com.tw/2017/04/PCOS.html" class="card_a" id = "3005" 
+                    onclick="count_click('3005')" target="_blank">多囊性卵巢症候群（懶人包）</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\health\health6.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.kingnet.com.tw/healthillustration/" class="card_a" id = "3006" 
+                    onclick="count_click('3006')" target="_blank">KingNet國家網路醫藥</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\health\health7.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.careonline.com.tw/p/topic-emergency.html" class="card_a" id = "3007" 
+                    onclick="count_click('3007')" target="_blank">急救懶人包</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="topic_entertainment" class="topic_collecter">
+      <header class="topic"><span class="fas fa-bomb"></span> 娛樂</header>
+      <div class="text_box">
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\entertainment\entertainment1.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.nownews.com/news/6331439" class="card_a" id = "4001"
+                    onclick="count_click('4001')" target="_blank">李善均車內輕生享年48歲！被爆吸毒又遭揭婚外情 懶人包一次看</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\entertainment\entertainment2.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://tw.nextapple.com/entertainment/20231227/FA96884FDD158F1D4B8588C33E5484FF" class="card_a" id = "4002"
+                    onclick="count_click('4002')" target="_blank">全台跨年懶人包</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\entertainment\entertainment3.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.popdaily.com.tw/korea/1467576" class="card_a" id = "4003"
+                    onclick="count_click('4003')" target="_blank">BTS「全員入伍」平頭合照曝光！成員退伍時間出爐、相約2025完整體！</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\entertainment\entertainment4.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.dcard.tw/f/entertainer/p/252925104" class="card_a" id = "4004"
+                    onclick="count_click('4004')" target="_blank">#分享 #懶人包 17Joshua事件整理</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\entertainment\entertainment5.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://reurl.cc/YV9nXL" class="card_a" id = "4005"
+                    onclick="count_click('4005')" target="_blank">【Josh、Amber家暴懶人包】台南Josh重新開箱「老婆砸爛16坪屋內現場」，電視沙發全都被狂割破壞！</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\entertainment\entertainment6.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://ent.ltn.com.tw/news/breakingnews/4338744" class="card_a" id = "4006"
+                    onclick="count_click('4006')" target="_blank">懶人包！黃子佼3支片不到一小時全刪光 「精選重點」一次看</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\entertainment\entertainment7.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.ettoday.net/news/20230720/2543582.htm" class="card_a" id = "4007"
+                    onclick="count_click('4007')" target="_blank">黃子佼2萬字聲明「110字懶人包」！　鄉民列出七大重點</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\entertainment\entertainment8.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://reurl.cc/YV9neX" class="card_a" id = "4008"
+                    onclick="count_click('4008')" target="_blank">GD、李善均、八大妹關係一次看！《D社》懶人包揭「自導自演簡訊」 質疑警「靠藝人宣揚業績」：已經過時了</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\entertainment\entertainment9.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.storm.mg/lifestyle/4973176?page=1" class="card_a" id = "4009"
+                    onclick="count_click('4009')" target="_blank">爺孫戀遺產爭議懶人包》 林靖恩大鬧飯店遭驅離！她是如何拿到大筆遺產的？律師公布解答</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\entertainment\entertainment10.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://reurl.cc/eL6ZDb" class="card_a" id = "4010"
+                    onclick="count_click('4010')" target="_blank">【GD、Jennie、V緋聞懶人包】GD突上傳『中指照』！網猜他不滿「Jennie、V」三人緋聞，大動作刪IG照片</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\entertainment\entertainment11.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://reurl.cc/97GpLa" class="card_a" id = "4011"
+                    onclick="count_click('4011')" target="_blank">【日本傑尼斯喜多川社長性侵事件懶人包】</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+      </div>  
+    </section>
+    <section id="topic_travel" class="topic_collecter">
+      <header class="topic"><span class="fas fa-camera"></span> 旅遊</header>
+      <div class="text_box">
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\travel\travel1.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://fullfenblog.tw/taoyuan-lazy-bag/" class="card_a" id = "5001"
+                    onclick="count_click('5001')" target="_blank">桃園景點懶人包</a></h4>
+                </li>
+              </ul>
+            </nav>  
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\travel\travel2.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.beauty321.com/post/57031" class="card_a" id = "5002"
+                    onclick="count_click('5002')" target="_blank">2023台北假日文創市集懶人包</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\travel\travel3.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://vocus.cc/article/655d73b4fd89780001a4f792" class="card_a" id = "5003"
+                    onclick="count_click('5003')"target="_blank">2023台北必逛聖誕市集｜聖誕市集亮點懶人包
+                  </a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\travel\travel4.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.letsgojp.com/archives/324604/" class="card_a" id = "5004"
+                    onclick="count_click('5004')"target="_blank">2024日本自由行規劃</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\travel\travel5.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://athena77.com/korea-travel/" class="card_a" id = "5005"
+                    onclick="count_click('5005')" target="_blank">2023首爾懶人包/首爾+京畿道全攻略</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\travel\travel6.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href= "https://www.paine0602.com/seoul-travel/" class="card_a" id = "5006"
+                    onclick="count_click('5006')"target="_blank">2023韓國自由行》十年累積的首爾自由行五天四夜懶人包分享</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\travel\travel7.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://grace5228blog.com/blog/post/thailand" class="card_a" id = "5007"
+                    onclick="count_click('5007')"target="_blank">泰國曼谷六天行程懶人包</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\travel\travel8.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://travel.ettoday.net/article/1036924.htm" class="card_a" id = "5008"
+                    onclick="count_click('5008')"target="_blank">雲林5個自然純真景點懶人包 鄉村風格隱藏版拍照聖地</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\travel\travel9.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://travelblog.tw/taiwan-trip/" class="card_a" id = "5009"
+                    onclick="count_click('5009')"target="_blank">2024旅遊景點懶人包》跟著達人一起玩一整年超過100條台灣自由行路線全攻略,不用提前規劃看這篇就夠!</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\travel\travel10.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://smiletaiwan.cw.com.tw/article/6955" class="card_a" id = "5010"
+                    onclick="count_click('5010')"target="_blank">高雄輕軌成圓試營運免費搭乘！精選環狀輕軌沿線7個推薦景點，藝文、親子路線一次整理</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\travel\travel11.jpg"
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://tw.news.yahoo.com/hokkaido-east-attractions-hotels-2023-143646586.html" class="card_a" id = "5011"
+                    onclick="count_click('5011')"target="_blank">東北海道景點住宿懶人包：最新景點玩法、住宿推薦看這篇</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="topic_sport" class="topic_collecter">
+      <header class="topic">  <span class="fas fa-dumbbell"></span>體育</header>
+      <div class="text_box">
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\sport\sport1.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="http://worldcups.tw/2024sport/" class="card_a" id = "6001"
+                    onclick="count_click('6001')"target="_blank">2024國際運動賽事表總覽：棒球、籃球、足球賽程懶人包</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\sport\sport2.png" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://tha0001.com/%E6%A3%92%E7%90%83%E8%A6%8F%E5%89%87/" class="card_a" id = "6002"
+                    onclick="count_click('6002')"target="_blank">初學者必學的【棒球規則】圖解懶人包！三分鐘就搞懂棒球怎麼打！</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\sport\sport3.png" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://9j88.tw/basketball-rules/" class="card_a" id = "6003"
+                    onclick="count_click('6003')"target="_blank">追NBA必看【籃球規則懶人包】三分鐘馬上懂國際籃球規則</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\sport\sport4.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://blog.decathlon.tw/yu-qiu-wan-zheng-gui-ze-zheng-li-da-qiu-qian-bu-neng-bu-zhi" class="card_a" id = "6004"
+                    onclick="count_click('6004')"target="_blank">羽球｜完整規則整理，打球前不能不知！</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\sport\sport5.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.youtube.com/watch?v=tmeNkX-mzVk" class="card_a" id = "6005"
+                    onclick="count_click('6005')"target="_blank">台灣驕傲 戴資穎</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\sport\sport6.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://reurl.cc/kr11YL" class="card_a" id = "6006"
+                    onclick="count_click('6006')"target="_blank">【NBA美國職籃】2023-24例行賽賽程、時間、比分、轉播、例行賽MVP競逐榜、新人王競逐榜懶人包</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\sport\sport7.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://www.chinatimes.com/realtimenews/20240103002808-260403?chdtv" class="card_a" id = "6007"
+                    onclick="count_click('6007')"target="_blank">2024金門馬拉松6日登場 選手領取參賽物資懶人包看這裡</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top"
+              src="Photos\sport\sport8.jpg" 
+              alt="Card image">
+          <div class="card-body">
+            <nav class="card_nav">
+              <ul class="card_ul">
+                <li class="card_li">
+                  <h4><a href="https://tw.news.yahoo.com/lol-040736800.html" class="card_a" id = "6008"
+                    onclick="count_click('6008')"target="_blank">《英雄聯盟》2024轉會消息懶人包！各賽區新陣容、選手異動總整理</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <button type="button" id="BackTop" class="toTop-arrow"></button>
+  <script>
+    $(function(){
+      $('#BackTop').click(function(){ 
+        $('html,body').animate({scrollTop:0}, 333);
+      });
+      $(window).scroll(function() {
+        if ( $(this).scrollTop() > 300 ){
+          $('#BackTop').fadeIn(222);
+        } else {
+          $('#BackTop').stop().fadeOut(222);
+        }
+      }).scroll();
+    });
+  </script>
+</body>
+
+<footer class = "foot">
+  <a href = "https://www.instagram.com/yzu_eeb2023?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA==" target="_blank">
+    <img class="ins" src="Photos\ins.png" alt="original trombones logo">製作團隊Instagram
+  </a>
+</footer>
+</html>
